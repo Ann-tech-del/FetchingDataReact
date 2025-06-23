@@ -21,6 +21,6 @@ A simple React application that fetches and displays random advice using the [Ad
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Ann-tech-del/advice-app.git
-cd advice-app
+git clone https://github.com/Ann-tech-del/FetchingDataReact.git
+cd FetchingDataReact
 ```
