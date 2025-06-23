@@ -30,10 +30,10 @@ useEffect(()=>{
 }, [])
   return (
     <>
-      
-      { error ? <p>{error}</p> : <h1 className="advice">{advice}</h1>}
+      <h1 className='title'>Get a Random Advice</h1>
+      { error ? <p>{error}</p> : <p className="advice">{advice}</p>}
      <button onClick={getAdvice} disabled={loading}>
-        {loading ? "Loading..." : "Get More Advice"}
+        {loading ? "Loading..." : "Get  Advice"}
       </button>
     </>
   )
