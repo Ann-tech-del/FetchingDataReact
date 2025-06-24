@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { ClipLoader } from "react-spinners";
 
 import './App.css'
 
@@ -8,7 +9,7 @@ function App() {
   const [loading,setLoading] =useState(false)
   async function getAdvice (){
     setLoading(true);
-    setError("");
+    setAdvice("");
     try {
       const response = await fetch ("https://api.adviceslip.com/advice")
       if (!response.ok){
@@ -33,7 +34,11 @@ useEffect(()=>{
       <h1 className='title'>Get a Random Advice</h1>
       { error ? <p>{error}</p> : <p className="advice">{advice}</p>}
      <button onClick={getAdvice} disabled={loading}>
-        {loading ? "Loading..." : "Get  Advice"}
+        {loading ? <ClipLoader
+        color="crimson"
+        loading={loading}
+        size={50}
+      /> : "Get  Advice"}
       </button>
     </>
   )
